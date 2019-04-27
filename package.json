@@ -1,0 +1,21 @@
+{
+  "name": "language-teko",
+  "version": "0.0.0",
+  "description": "An Atom grammar package for Teko",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cstuartroe/teko-atom-grammar.git"
+  },
+  "author": "Conor Stuart Roe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cstuartroe/teko-atom-grammar/issues"
+  },
+  "homepage": "https://github.com/cstuartroe/teko-atom-grammar#readme",
+  "dependencies": {
+    "tree-sitter-teko": "^1.0.1"
+  }
+}

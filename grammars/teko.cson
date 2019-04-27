@@ -1,0 +1,22 @@
+name: 'Teko'
+scopeName: 'teko'
+type: 'tree-sitter'
+parser: 'tree-sitter-teko'
+fileTypes: [".to"]
+scopes:
+  '''
+    "for",
+    "parallel",
+    "while",
+    "if",
+    "else"
+  ''' : 'keyword.control'
+  'known_type': 'entity.name.type'
+  'num': 'constant.numeric'
+  'bool': 'keyword.operator'
+  'bits, bytes': 'constant.other.symbol'
+  'string': 'string',
+  'char': 'string'
+comments:
+  start: '/*'
+  end: '*/'
