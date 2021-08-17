@@ -2,21 +2,41 @@ name: 'Teko'
 scopeName: 'teko'
 type: 'tree-sitter'
 parser: 'tree-sitter-teko'
-fileTypes: [".to"]
+fileTypes: ['to']
 scopes:
-  '''
-    "for",
-    "parallel",
-    "while",
-    "if",
-    "else"
-  ''' : 'keyword.control'
-  'known_type': 'entity.name.type'
-  'num': 'constant.numeric'
-  'bool': 'keyword.operator'
-  'bits, bytes': 'constant.other.symbol'
-  'string': 'string',
-  'char': 'string'
+    'suffix': 'entity.name.type',
+    'comment': 'comment',
+    'string': 'string',
+    'num, bool, char': 'constant.numeric.integer',
+    'label': 'punctuation.definition.identity',
+    '''
+      type_definition > "=",
+      declaration > "=",
+      updater,
+      key_value > ":",
+      object_field > ":",
+      argdef > ":",
+      function_definition > ":",
+      function_definition > "->",
+      declaration > ":"
+    ''': 'variable',
+    '''
+      comparator,
+      add_sub,
+      mult_div,
+      exp
+    ''': 'constant.other.symbol',
+    'attribute > label': 'variable',
+    '''
+      type_definition > "type",
+      set > "set",
+      map > "map",
+      function_definition > "fn",
+      block_expression > "do",
+      block_expression > "scope",
+      if > "if",
+      if > "then",
+      if > "else",
+    ''': 'punctuation.definition.italic'
 comments:
-  start: '/*'
-  end: '*/'
+  start: '// '

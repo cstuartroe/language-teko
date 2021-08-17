@@ -1,21 +1,23 @@
 {
   "name": "language-teko",
-  "version": "0.0.0",
-  "description": "An Atom grammar package for Teko",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
+  "version": "0.1.0",
+  "description": "An Atom parser for Teko",
+  "repository": "git@github.com:cstuartroe/language-teko.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cstuartroe/teko-atom-grammar.git"
-  },
-  "author": "Conor Stuart Roe",
+  "author": "Conor Stuart-Roe",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cstuartroe/teko-atom-grammar/issues"
+  "engines": {
+    "atom": "*"
   },
-  "homepage": "https://github.com/cstuartroe/teko-atom-grammar#readme",
   "dependencies": {
-    "tree-sitter-teko": "^1.0.1"
+    "nan": "^2.14.2",
+    "tree-sitter-teko": "^1.1.3"
+  },
+  "devDependencies": {
+    "electron": "^6.1.12",
+    "electron-rebuild": "^2.3.5"
   }
 }
